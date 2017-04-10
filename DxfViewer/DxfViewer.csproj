@@ -7,8 +7,8 @@
     <ProjectGuid>{1F3C8539-DB44-4C96-A55F-8F80AB03CF03}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DxfAndPDFViewer</RootNamespace>
-    <AssemblyName>DxfAndPDFViewer</AssemblyName>
+    <RootNamespace>DxfViewer</RootNamespace>
+    <AssemblyName>DxfViewer</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -16,7 +16,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>\\pdmsrv\SolidWorks Admin\DXFViewer\</PublishUrl>
+    <PublishUrl>\\srvkb\SolidWorks Admin\Install\DXFViewer\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -26,19 +26,19 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <UpdateUrl>\\pdmsrv\SolidWorks Admin\DXFViewer\</UpdateUrl>
-    <ProductName>Поиск</ProductName>
+    <UpdateUrl>\\srvkb\SolidWorks Admin\Soft\DXFViewer\</UpdateUrl>
+    <ProductName>DxfViewer</ProductName>
     <PublisherName>Vents</PublisherName>
     <MinimumRequiredVersion>1.0.0.3</MinimumRequiredVersion>
-    <ApplicationRevision>69</ApplicationRevision>
+    <ApplicationRevision>11</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
-    <BootstrapperEnabled>false</BootstrapperEnabled>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -46,7 +46,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -56,7 +55,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>F2C0DAAE2D2D2E164716A9B0C09B5E9196D369CF</ManifestCertificateThumbprint>
@@ -65,56 +63,22 @@
     <ManifestKeyFile>DxfViewer_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
+    <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
-  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <PropertyGroup>
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>DxfViewer.App</StartupObject>
-  </PropertyGroup>
-  <PropertyGroup>
-    <Win32Resource>
-    </Win32Resource>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>pdm-0-1.ico</ApplicationIcon>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="eDrawingHostControl">
-      <HintPath>..\..\eDrawingHostControl source project\obj\Release\eDrawingHostControl.dll</HintPath>
-    </Reference>
-    <Reference Include="eDrawings.Interop.EModelViewControl">
-      <HintPath>C:\Program Files\SOLIDWORKS Corp\eDrawings\eDrawings.Interop.EModelViewControl.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="eDrawingsGraphicsCardClient">
-      <HintPath>C:\Program Files\SOLIDWORKS Corp\eDrawings\eDrawingsGraphicsCardClient.dll</HintPath>
-    </Reference>
-    <Reference Include="EModelInterop">
-      <HintPath>C:\Program Files\SOLIDWORKS Corp\eDrawings\EModelInterop.dll</HintPath>
-    </Reference>
-    <Reference Include="Interop.EdmLib, Version=5.18.0.0, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-      <HintPath>C:\Program Files\SolidWorks-Russia\SWR-Редактор спецификаций 2015\Interop.EdmLib.dll</HintPath>
-    </Reference>
-    <Reference Include="Interop.EModelView">
-      <HintPath>C:\Users\Antonyk\Downloads\123\HostControl\Interop.EModelView.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="SolidWorks.Interop.sldworks">
-      <HintPath>C:\Program Files\SOLIDWORKS Corp\SOLIDWORKS\api\redist\SolidWorks.Interop.sldworks.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="SolidWorks.Interop.swconst">
-      <HintPath>C:\Program Files\SOLIDWORKS Corp\SOLIDWORKS\api\redist\SolidWorks.Interop.swconst.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -138,29 +102,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Classes\ContextM.cs" />
-    <Compile Include="Classes\EpdmVault.cs" />
-    <Compile Include="LoadLocalFile.xaml.cs">
-      <DependentUpon>LoadLocalFile.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PDFControl.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="PDFControl.Designer.cs">
-      <DependentUpon>PDFControl.cs</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
     <Compile Include="UserControlEdr.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlEdr.Designer.cs">
       <DependentUpon>UserControlEdr.cs</DependentUpon>
     </Compile>
-    <Page Include="LoadLocalFile.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -188,10 +135,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="PDFControl.resx">
-      <DependentUpon>PDFControl.cs</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -210,80 +153,26 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="AcroPDFLib">
-      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="AxAcroPDFLib">
-      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>aximp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
-    <COMReference Include="EModelView">
-      <Guid>{18B056B7-AF64-459C-8268-53EAF0E0E437}</Guid>
-      <VersionMajor>16</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
-  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="LogoBL.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource\LogoBL.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <PublishFile Include="DxfAndPDFViewer.pdb">
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
       <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource\Pdm Icons\Adobe-Reader.png" />
-    <Resource Include="Resource\Pdm Icons\assembly.png" />
-    <Resource Include="Resource\Pdm Icons\drawing.png" />
-    <Resource Include="Resource\Pdm Icons\edrwprt.jpg" />
-    <Resource Include="Resource\Pdm Icons\part.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource\Pdm Icons\Adobe-ReaderIco.png" />
-    <Resource Include="Resource\Pdm Icons\assemblyIco.png" />
-    <Resource Include="Resource\Pdm Icons\drawingIco.png" />
-    <Resource Include="Resource\Pdm Icons\edrwprtIco.jpg" />
-    <Resource Include="Resource\Pdm Icons\partIco.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource\images.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource\pdm-0-1.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="pdm-0-1.ico" />
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

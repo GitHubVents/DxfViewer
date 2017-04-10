@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DxfViewer"
         mc:Ignorable="d"
-        Title="VENTS Viewer" Height="800" Width="1000" WindowState="Maximized" Loaded="Window_Loaded" KeyDown="Window_KeyDown">
+        Title="VENTS Viewer" Height="800" Width="1000" WindowState="Maximized" Loaded="Window_Loaded" KeyDown="Window_KeyDown" Closed="Window_Closed">
     <Window.Resources>
         <Image x:Key="MyImage" Source="Resource\images.png"/>
 
@@ -22,7 +22,7 @@
 
         <TextBox Name="TxtBoxSearch" FontSize="32"  FontWeight="Bold" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch"/>
             <!--<Button Name="BtnOpen" HorizontalAlignment="Right" Width="143" Grid.ColumnSpan="2" Click="BtnOpen_Click"/>-->
-        <Button Name="BtnSearch" Content="{StaticResource MyImage}" HorizontalAlignment="Right" Width="50" Click="BtnSearch_Click" Grid.Column="0" Grid.Row="0"/>
+        <Button Name="BtnSearch" Content="{StaticResource MyImage}" HorizontalAlignment="Right" Width="50" Click="BtnSearch_Click" Grid.Column="0" Grid.Row="0" Height="50" VerticalAlignment="Top"/>
          <!--<Button x:Name="BtnOpenFolder" Content="Выбрать папку" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="BtnOpenFolder_Click" Height="28"/>-->
         <DataGrid Grid.Row="1" Grid.Column="0" Name="DgFiles" AutoGenerateColumns="False" ScrollViewer.VerticalScrollBarVisibility="Visible"
                       CanUserReorderColumns="False" IsReadOnly="True"

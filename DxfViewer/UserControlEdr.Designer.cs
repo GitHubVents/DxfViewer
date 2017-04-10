@@ -1,4 +1,4 @@
-﻿namespace DxfAndPDFViewer
+﻿ namespace DxfAndPDFViewer
 {
     partial class UserControlEdr
     {
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+         
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlEdr));
             this.axEModelViewControl1 = new AxEModelView.AxEModelViewControl();
             ((System.ComponentModel.ISupportInitialize)(this.axEModelViewControl1)).BeginInit();
@@ -56,7 +57,8 @@
         }
 
         #endregion
-
+    
+        
         public AxEModelView.AxEModelViewControl axEModelViewControl1;
     }
 }

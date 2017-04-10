@@ -40,6 +40,8 @@ namespace DxfViewer
                 var rowStyle = new Style(typeof(DataGridRow));
                 rowStyle.Setters.Add(new EventSetter(DataGridRow.MouseDoubleClickEvent, new MouseButtonEventHandler(Row_DoubleClick)));
                 DgFiles.RowStyle = rowStyle;
+
+                 
             }
             catch (Exception ex)
             {
@@ -125,9 +127,7 @@ namespace DxfViewer
                             {
                                 pdfControl.Dispose();
                             }
-                      
                             break;
-
                         case ".pdf":
                             pdfControl = new PDFControl();
                             hostpdf = new WindowsFormsHost();
@@ -142,9 +142,8 @@ namespace DxfViewer
                     }
                 }
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
-                
                 System.Windows.Forms.MessageBox.Show(ex.Message + ", \n" + ex.StackTrace);
             }
         }
@@ -309,14 +308,17 @@ namespace DxfViewer
         }
         ~MainWindow()
         {
-            if( pdfControl != null)
+        }
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            if (pdfControl != null)
             {
                 pdfControl.Dispose();
             }
             if (DXFControl != null)
             {
                 DXFControl.Dispose();
-            }  
+            }
         }
     }
 }
